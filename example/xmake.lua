@@ -1,6 +1,10 @@
 add_rules("mode.debug", "mode.release")
+add_repositories("iconeus-repo https://github.com/Iconeus/xmake-repo.git tensor")
+
+add_requires("cppflow")
 
 target("example")
+    add_packages("cppflow")
     set_kind("binary")
     add_files("src/*.cpp")
 -- new test
