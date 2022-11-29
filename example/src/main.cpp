@@ -1,5 +1,5 @@
 #include <iostream>
-#include "openmp.h>
+#include "openmp.h"
 using namespace std;
 
 int main(int argc, char** argv)
