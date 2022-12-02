@@ -14,11 +14,14 @@ pipeline{
       }
     }
     stage('message'){
-      post 
+      steps
       {
-        success 
+        post 
         {
-          slackSend channel: '#ci', message: 'ok'
+          success 
+          {
+            slackSend channel: '#ci', message: 'ok'
+          }
         }
       }
     }
