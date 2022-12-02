@@ -16,11 +16,7 @@ pipeline{
     stage('message'){
       steps
       {
-
-          success 
-          {
-            slackSend channel: '#ci', message: 'ok'
-          }
+slackSend channel: '#ci', failOnError: true, message: 'failed', tokenCredentialId: 'slack-token'
       }
     }
   }
