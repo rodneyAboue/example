@@ -5,7 +5,7 @@ pipeline{
       steps
       {
         powershell "xmake -y"
-        echo  ${env.CHANGE_AUTHOR}
+        echo  "auteur : ${env.CHANGE_AUTHOR} ${env.CHANGE_AUTHOR_EMAIL} ${env.CHANGE_AUTHOR_DISPLAY_NAME}"
       }
     }
     stage('run'){
