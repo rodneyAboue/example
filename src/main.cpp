@@ -4,6 +4,6 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-    cout << "hello world bv cghfch!" << endl;
+    cout << "kenneth" << endl;
     return 0;
 }
