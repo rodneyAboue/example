@@ -13,11 +13,13 @@ pipeline{
         powershell "xmake run"
       }
     }
-    post 
-    {
-      success 
+    stage('message'){
+      post 
       {
-         slackSend channel: '#ci', message: 'ok'
+        success 
+        {
+          slackSend channel: '#ci', message: 'ok'
+        }
       }
     }
   }
