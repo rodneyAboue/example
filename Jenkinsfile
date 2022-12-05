@@ -2,8 +2,7 @@
 pipeline{
   agent any
   stages{
-  try{
-  stage('build'){
+    stage('build'){
       steps
       {
         powershell "xmake -y"
@@ -13,15 +12,14 @@ pipeline{
       steps
       {
         script{
-         def name=powershell(returnStdout: true, script: "git log -1 --pretty=format:'%an'") 
-         echo name
-          powershell "dir env:"
+          def name=powershell(returnStdout: true, script: "git log -1 --pretty=format:'%an'") 
+          def url=$env.GIT_URL
+          def commit=$env.GIT_COMMIT
+          def branch=$env.GIT_BRANCH
+          echo "${name} ${url} ${commit} ${branch} "
         }
       }
     }
-    }catch(e){
-      slackSend channel: '#ci', message: 'Build failed'
-    }
-    
   }
 }
+
