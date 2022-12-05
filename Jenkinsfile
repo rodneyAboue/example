@@ -13,7 +13,7 @@ pipeline{
         echo "GIT_PREVIOUS_COMMIT: ${env.GIT_PREVIOUS_COMMIT}"
         echo "GIT_PREVIOUS_SUCCESSFUL_COMMIT: ${env.GIT_PREVIOUS_SUCCESSFUL_COMMIT}"
         echo "GIT_URL: ${env.GIT_URL}"
-        echo "GIT_URL_N: - "${env.GIT_URL_N}
+        echo "GIT_URL_N: ${env.GIT_URL_N}"
         echo "GIT_AUTHOR_NAME: ${env.GIT_AUTHOR_NAME}"
         echo "GIT_COMMITTER_EMAIL: ${env.GIT_COMMITTER_EMAIL}"
         // echo  "auteur : ${env.CHANGE_AUTHOR} ${env.CHANGE_AUTHOR_EMAIL} ${env.CHANGE_AUTHOR_DISPLAY_NAME}"
@@ -34,7 +34,7 @@ pipeline{
         echo "GIT_PREVIOUS_COMMIT: ${env.GIT_PREVIOUS_COMMIT}"
         echo "GIT_PREVIOUS_SUCCESSFUL_COMMIT: ${env.GIT_PREVIOUS_SUCCESSFUL_COMMIT}"
         echo "GIT_URL: ${env.GIT_URL}"
-        echo "GIT_URL_N: - "${env.GIT_URL_N}
+        echo "GIT_URL_N: ${env.GIT_URL_N}"
         echo "GIT_AUTHOR_NAME: ${env.GIT_AUTHOR_NAME}"
         echo "GIT_COMMITTER_EMAIL: ${env.GIT_COMMITTER_EMAIL}"
         // echo "${env.GIT_AUTHOR_NAME} ${env.GIT_COMMITTER_NAME} author:${env.CHANGE_URL}"
