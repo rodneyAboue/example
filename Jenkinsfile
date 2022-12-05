@@ -18,14 +18,14 @@ pipeline{
         // echo "GIT_AUTHOR_NAME: ${env.GIT_AUTHOR_NAME}"
         // echo "GIT_COMMITTER_EMAIL: ${env.GIT_COMMITTER_EMAIL}"
         
-        GIT_COMMIT = ${env.GIT_COMMIT}
+        //GIT_COMMIT = ${env.GIT_COMMIT}
         // GIT_NAME = $(git --no-pager show -s --format='%an' $GIT_COMMIT)
         // GIT_EMAIL = $(git --no-pager show -s --format='%ae' $GIT_COMMIT)
         // echo "GIT_COMMIT: ${GIT_COMMIT}"
         // echo "GIT_NAME: ${GIT_NAME}"
         // echo "GIT_EMAIL: ${GIT_EMAIL}"
         
-        powershell "git --no-pager show -s --format='%an' ${GIT_COMMIT}"
+        powershell "git --no-pager show -s --format='%an' ${env.GIT_COMMIT}"
         
         // echo  "auteur : ${env.CHANGE_AUTHOR} ${env.CHANGE_AUTHOR_EMAIL} ${env.CHANGE_AUTHOR_DISPLAY_NAME}"
       }
