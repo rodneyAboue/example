@@ -5,9 +5,7 @@ pipeline{
     stage('build'){
       steps
       {
-        echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
         powershell "xmake -y"
-        // echo  "auteur : ${env.CHANGE_AUTHOR} ${env.CHANGE_AUTHOR_EMAIL} ${env.CHANGE_AUTHOR_DISPLAY_NAME}"
       }
     }
     stage('run'){
