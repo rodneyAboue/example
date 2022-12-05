@@ -13,7 +13,7 @@ pipeline{
     stage('run'){
       steps
       {
-        def name=powershell(returnStdout: true, script: "git log -1 --pretty=format:'%an'") 
+         NAME=powershell(returnStdout: true, script: "git log -1 --pretty=format:'%an'") 
       }
     }
   }
