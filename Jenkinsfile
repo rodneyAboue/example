@@ -7,16 +7,15 @@ pipeline{
       steps
       {
         powershell "dir"
+        script{
         NAME=powershell(returnStdout: true, script: "git log -1 --pretty=format:'%an'")
+        }
       }
     }
     stage('run'){
       steps
       {
-        script{
-           
           echo "${name} "
-        }
       }
     }
   }
