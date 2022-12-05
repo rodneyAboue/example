@@ -16,6 +16,7 @@ pipeline{
         script{
          def name=powershell(returnStdout: true, script: "git log -1 --pretty=format:'%an'") 
          echo name
+          powershell "dir env:"
         }
       }
     }
