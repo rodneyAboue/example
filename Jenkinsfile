@@ -53,6 +53,7 @@ pipeline{
     stage("Env Variables") {
             steps {
                 powershell "dir env:"
+                powershell "git comit author
             }
         }
   }
