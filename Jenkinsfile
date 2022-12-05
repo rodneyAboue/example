@@ -17,13 +17,5 @@ pipeline{
         powershell "xmake run"
       }
     }
-    stage('message'){
-      steps
-      {
-
-        // echo "GIT_AUTHOR_NAME: ${env.GIT_AUTHOR_NAME}"
-        // echo "GIT_COMMITTER_EMAIL: ${env.GIT_COMMITTER_EMAIL}"
-      }
-    }
   }
 }
