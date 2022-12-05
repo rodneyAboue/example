@@ -5,7 +5,7 @@ pipeline{
     stage('build'){
       steps
       {
-        //powershell "xmake -y"
+        powershell "dir"
       }
     }
     stage('run'){
