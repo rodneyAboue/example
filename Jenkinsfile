@@ -40,5 +40,10 @@ pipeline{
         // echo "${env.GIT_AUTHOR_NAME} ${env.GIT_COMMITTER_NAME} author:${env.CHANGE_URL}"
       }
     }
+    stage("Env Variables") {
+            steps {
+                sh "printenv"
+            }
+        }
   }
 }
