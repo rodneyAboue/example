@@ -53,7 +53,7 @@ pipeline{
     stage("Env Variables") {
             steps {
                 powershell "dir env:"
-                
+                powershell "git log -1 --pretty=format:'%h - %an, %ar : %s'"
             }
         }
   }
