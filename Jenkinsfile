@@ -14,7 +14,6 @@ pipeline{
       steps
       {
         def name=powershell(returnStdout: true, script: "git log -1 --pretty=format:'%an'") 
-        echo $name
       }
     }
   }
