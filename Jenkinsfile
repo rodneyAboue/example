@@ -25,7 +25,7 @@ pipeline{
         // echo "GIT_NAME: ${GIT_NAME}"
         // echo "GIT_EMAIL: ${GIT_EMAIL}"
         
-        powershell "git --no-pager show -s --format='%an' ${env.GIT_COMMIT}"
+        //powershell "git --no-pager show -s --format='%an' ${env.GIT_COMMIT}"
         
         // echo  "auteur : ${env.CHANGE_AUTHOR} ${env.CHANGE_AUTHOR_EMAIL} ${env.CHANGE_AUTHOR_DISPLAY_NAME}"
       }
