@@ -15,7 +15,9 @@ pipeline{
     stage('run'){
       steps
       {
+        script{
           echo "${name} "
+        }
       }
     }
   }
