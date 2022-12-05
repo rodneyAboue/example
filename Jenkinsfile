@@ -2,7 +2,8 @@
 pipeline{
   agent any
   stages{
-    stage('build'){
+  try{
+  stage('build'){
       steps
       {
         powershell "xmake -y"
@@ -18,5 +19,9 @@ pipeline{
         }
       }
     }
+    }catch(e){
+      slackSend channel: '#ci', message: 'Build failed'
+    }
+    
   }
 }
