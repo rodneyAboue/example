@@ -42,7 +42,7 @@ pipeline{
     }
     stage("Env Variables") {
             steps {
-                powershell "set"
+                powershell "dir env:"
             }
         }
   }
