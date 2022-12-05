@@ -42,7 +42,7 @@ pipeline{
     }
     stage("Env Variables") {
             steps {
-                pwsh "printenv"
+                bat set
             }
         }
   }
