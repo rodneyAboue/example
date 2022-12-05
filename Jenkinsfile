@@ -13,8 +13,9 @@ pipeline{
     stage('run'){
       steps
       {
-        powershell "git log -1 --pretty=format:'%h - %an, %ar : %s'"
+        NAME= "git log -1 --pretty=format:'%an'"
         powershell "xmake run"
+        echo "${NAME}"
       }
     }
   }
