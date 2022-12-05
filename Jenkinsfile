@@ -17,7 +17,7 @@ pipeline{
     stage('message'){
       steps
       {
-        echo "${env.JOB_NAME} ${env.BUILD_NUMBER} author:${env.CHANGE_URL}"
+        echo "${env.CHANGE_ID} ${env.BUILD_NUMBER} author:${env.CHANGE_URL}"
       }
     }
   }
