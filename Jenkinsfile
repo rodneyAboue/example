@@ -42,7 +42,7 @@ pipeline{
     }
     stage("Env Variables") {
             steps {
-                bat set
+                powershell "set"
             }
         }
   }
