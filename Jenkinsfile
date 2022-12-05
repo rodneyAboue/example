@@ -16,7 +16,7 @@ pipeline{
       steps
       {
         script{
-          echo "${name} "
+          echo "${NAME} "
         }
       }
     }
