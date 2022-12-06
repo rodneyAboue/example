@@ -1,13 +1,14 @@
-script{
-       def NAME=powershell(returnStdout: true, script: "git log -1 --pretty=format:'%an'")
-}
+
 pipeline{
   agent any
   stages{
-    
+    def NAME
     stage('build'){
       steps
       {
+        script{
+                     NAME=powershell(returnStdout: true, script: "git log -1 --pretty=format:'%an'")
+              }
         powershell "dir"
       }
     }
