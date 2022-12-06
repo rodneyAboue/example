@@ -7,7 +7,7 @@ pipeline{
       {
         script{
           try{
-            powershell "xmake -y"
+            //powershell "xmake -y"
             powershell "dir"
           }catch(e){
             def name=powershell(returnStdout: true, script: "git log -1 --pretty=format:'%an'") 
