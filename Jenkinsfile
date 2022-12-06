@@ -1,18 +1,20 @@
-
 pipeline{
   agent any
   stages{
-    
-    stage('build'){
+    script{
+      def name=powershell(returnStdout: true, script: "git log -1 --pretty=format:'%an'") 
+      def url= env.GIT_URL
+      def commit= env.GIT_COMMIT
+    }
+  stage('build'){
       steps
       {
-        script{
-               def NAME=powershell(returnStdout: true, script: "git log -1 --pretty=format:'%an'")
-           echo "${NAME} "
-              }
-        powershell "dir"
+        try{
+            echo "name: ${name} url: ${url}"
+        }catch(e){
+          slackSend channel: '#ci', message: 'Build failed '
+        }
+        
       }
     }
-  }
 }
-
