@@ -8,16 +8,9 @@ pipeline{
       {
         script{
                def NAME=powershell(returnStdout: true, script: "git log -1 --pretty=format:'%an'")
+           echo "${NAME} "
               }
         powershell "dir"
-      }
-    }
-    stage('run'){
-      steps
-      {
-        script{
-          echo "${NAME} "
-        }
       }
     }
   }
